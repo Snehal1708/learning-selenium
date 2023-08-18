@@ -15,6 +15,7 @@ public class Selenium09 {
         options.addArguments("start-maximized");
         WebDriver driver = new ChromeDriver(options);
         driver.navigate().to("https://katalon-demo-cura.herokuapp.com/");
+
         WebElement makeappBtn = driver.findElement(By.xpath("//a[@href='./profile.php#login']"));
         makeappBtn.click();
         Assert.assertEquals(driver.getCurrentUrl(),"https://katalon-demo-cura.herokuapp.com/profile.php#login");
